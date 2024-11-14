@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="store.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://js.sentry-cdn.com/cae9507f3f9203097c2fe2618b7e8fba.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Sentry.onLoad(function () {
+        Sentry.init({
+          dsn: 'https://cae9507f3f9203097c2fe2618b7e8fba@o4508235660328960.ingest.us.sentry.io/4508298647961600',
+          integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+          tracesSampleRate: 1.0,
+          tracePropagationTargets: [
+            'localhost',
+            /^https:\/\/yourserver\.io\/api/,
+          ],
+          replaysSessionSampleRate: 0.1,
+          replaysOnErrorSampleRate: 1.0,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <button class="add-products-site-btn">Добавить товар на сайт</button>
+      <div class="add-products-site"></div>
+      <nav>
+        <div class="filters">
+          <div class="category">
+            <label for="category-select">Фильтровать по категориям:</label>
+            <select id="category-select"></select>
+          </div>
+          <div class="limit">
+            <label for="limit-input">Показывать шт. по:</label>
+            <input type="number" id="limit-input" value="6" />
+          </div>
+          <button id="filter-btn">Применить фильтр</button>
+        </div>
+      </nav>
+    </header>
+    <div class="buttons-menu">
+      <button id="burger-menu">Моя Корзина</button>
+      <button id="product-menu">История покупок</button>
+    </div>
+    <main>
+      <div class="main">
+        <div class="container"></div>
+        <div class="my-card"></div>
+        <section id="products-container"></section>
+        <div class="my-product"></div>
+      </div>
+      <div class="more-btn-container">
+        <button class="more-btn">Посмотреть еще</button>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="store.js"></script>
+  </body>
+</html>
