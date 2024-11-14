@@ -455,6 +455,10 @@ button.toggle-text-button {
 }
 
 @media screen and (max-width: 480px) {
+  body{
+    background-color:#fff;
+  }
+
   .product-card {
     padding: 10px;
   }
