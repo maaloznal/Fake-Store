@@ -459,6 +459,13 @@ button.toggle-text-button {
     background-color:#fff;
   }
 
+  .product-card h3 {
+    color: black;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
   .product-card {
     padding: 10px;
   }
