@@ -456,8 +456,47 @@ button.toggle-text-button {
 
 @media screen and (max-width: 480px) {
   body{
-    background-color:#fff;
+    background-color:#c1a1a1;
   }
+
+  p{
+    background-color:#ffffff;
+    color: black;
+  }
+
+  div.main {
+    height: revert-layer;
+    width: 90%;
+    display: inline-flex;
+}
+
+.admin-panel {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 1.1);
+  z-index: 1;
+  display: none;
+  position: absolute;
+  top: 90px;
+  right: 2rem;
+  width: 86%;
+  height: 36rem;
+  background: #b7c1cc;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 800px;
+  padding: 20px;
+  overflow-y: auto;
+  margin-right: -40px;
+}
 
   .product-card h3 {
     color: black;
